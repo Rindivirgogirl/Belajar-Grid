@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body,
+     html{
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+     }
+
+     .container{
+        width: 500px;
+        margin: 50px auto;
+        border: 5px solid #333;
+        box-sizing: border-box;
+        padding: 5px;
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        "header header"
+        "aside main"
+        "nav main"
+        "footer footer";
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr 1fr 1.3fr;
+     }
+
+     header{
+        background-color: #B063D8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: header;
+        /* grid-column: 1/3;
+        grid-row: 1/2; */
+     }
+
+     aside{
+        background-color: #2F93FF;
+        padding: 60px 0;
+        grid-area: aside;
+        /* grid-column: 1/2;
+        grid-row: 2/3; */
+     }
+
+     nav{
+        background-color: #e45765;
+        padding: 100px 0;
+        grid-area: nav;
+        /* grid-column: 1/2;
+        grid-row: 3/4; */
+     }
+      main{
+        background-color: #E0AA77;
+        box-sizing: border-box;
+        flex: 1.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: main;
+        /* grid-column: 2/3;
+        grid-row: 2/4; */
+      }
+      footer{
+        background-color: #666;
+        padding: 20px 0;
+        grid-area: footer;
+        /* grid-column: 1/3;
+        grid-row: 4/5; */
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <aside>Aside</aside>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <footer>Footer</footer>
+    </div>
+    
+</body>
+</html>
